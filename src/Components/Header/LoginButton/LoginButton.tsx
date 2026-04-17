@@ -17,11 +17,6 @@ const LoginButton = () => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  const isPremium =
-    user?.premium === true ||
-    user?.isPremium === true ||
-    user?.subscriptionStatus?.toLowerCase() === "premium";
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -57,7 +52,7 @@ const LoginButton = () => {
         >
           <span className={styles.triggerLabel}>
             {user.firstName} {user.lastName[0]}.
-            {isPremium && (
+            {user.premium && (
               <span
                 className={styles.crown}
                 aria-label="Premium user"
@@ -98,7 +93,7 @@ const LoginButton = () => {
               <Badge count={unreadCount} />
             </Link>
 
-            {!isPremium && (
+            {!user.premium && (
               <Link
                 to="/premium"
                 className={styles.item}
