@@ -28,6 +28,7 @@ import { ConfirmCode } from "./Pages/PasswordRecovery/ConfirmCode/ConfirmCode";
 import { ConfirmPassword } from "./Pages/PasswordRecovery/ConfirmPassword/ConfirmPassword";
 import { Settings } from "./Pages/Settings/Settings";
 import { Confirm2FA } from "./Pages/Login/2FA/Confirm2FA";
+import { BetaTestBanner } from "./Components/BetaTestBanner/BetaTestbanner";
 
 function App() {
   const { user } = useUser();
@@ -53,6 +54,7 @@ function App() {
         rtl={false}
         theme={theme}
       />
+      <BetaTestBanner />
 
       <Routes>
         <Route element={<Layout />}>

@@ -24,6 +24,18 @@
   box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
 }
 
+/* Убираем стрелки в Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Убираем стрелки в Firefox */
+input[type="number"] {
+  appearance: textfield;
+}
+
 @media (max-width: 400px) {
   .codeInputContainer {
     gap: 6px;
