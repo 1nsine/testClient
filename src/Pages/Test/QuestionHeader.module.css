@@ -1,0 +1,30 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  grid-area: 2 / 11 / 5 / 15;
+  padding: 0.5em;
+}
+
+.questionHeader {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.questionHeader h2 {
+  font-size: 1.2rem;
+}
+
+.progress {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Медиазапросы для мобильных */
+@media (max-width: 768px) {
+  .question {
+    grid-row: 3;
+  }
+}

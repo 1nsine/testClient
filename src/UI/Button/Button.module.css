@@ -1,0 +1,70 @@
+.Button {
+  margin-top: 1rem;
+  width: 100%;
+  cursor: pointer;
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  backdrop-filter: var(--btn-backdrop);
+  border-radius: var(--btn-border-radius);
+  border: var(--border-main);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-small);
+  color: var(--color-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition:
+    background var(--transition-main),
+    box-shadow var(--transition-main);
+}
+.Button:hover {
+  background-color: var(--bg-hover);
+  box-shadow: var(--shadow-main);
+}
+
+.ButtonFilled {
+  background: var(--color-main);
+  color: var(--bg-main);
+}
+
+.ButtonFilled:hover {
+  background-color: var(--bg-main);
+  color: var(--color-main);
+  box-shadow: var(--shadow-main);
+}
+
+.ButtonOutline {
+  background: transparent;
+  color: var(--color-main);
+  border: var(--border-main);
+}
+
+.ButtonOutline:hover {
+  background: var(--color-main);
+  color: var(--bg-main);
+  box-shadow: var(--shadow-main);
+}
+
+.ButtonLink {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  color: var(--color-main);
+  text-decoration: underline;
+}
+
+.ButtonLink:hover {
+  background: transparent;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+.Button:disabled {
+  background-color: var(--bg-card);
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--color-secondary);
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background: var(--bg-card);
+  color: var(--color-main);
+  border: var(--border-main);
+  border-radius: var(--border-radius);
+}
+
+.dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  min-width: 140px;
+  background: var(--bg-card);
+  border: var(--border-main);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item:hover {
+  background: var(--color-secondary);
+}
+
+.active {
+  background: var(--color-secondary);
+  font-weight: 500;
+}

@@ -1,0 +1,118 @@
+.container {
+  --sidebar-width: 15%;
+  display: block;
+  position: relative;
+}
+
+.sideBar {
+  background-color: var(--bg-card);
+  padding: 1rem 0.5rem;
+  width: var(--sidebar-width);
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  height: calc(100vh - 3rem);
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.main {
+  background-color: var(--bg-main);
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  padding: 1rem 0.5rem;
+  min-height: calc(100vh - 3rem);
+}
+
+.link {
+  color: var(--color-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  margin: 0.2rem;
+}
+
+.link:hover {
+  transition: 0.3s ease;
+  color: var(--color-secondary);
+}
+
+.link.active {
+  background-color: var(--color-secondary);
+  border: var(--border-main);
+}
+
+.link.active:hover {
+  color: var(--color-main);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+.section:not(:first-child) {
+  padding-top: 3rem;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  min-height: 4rem;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.buttonWithBadge {
+  position: relative;
+  display: inline-block;
+}
+
+.modalContainer {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.modalContainer > div {
+  flex: 1 1 50%;
+}
+
+.modalContent {
+  width: 100%;
+}
+.qrCode {
+  height: 200px;
+  width: 100%;
+}
+
+.error {
+  color: tomato;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+  min-height: 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    --sidebar-width: 0px;
+    padding: 0.5rem 1rem;
+  }
+  .sideBar {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+    width: 100%;
+    min-height: auto;
+  }
+}

@@ -1,0 +1,108 @@
+.section {
+  padding: 3rem 1rem;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  border: var(--border-main);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-main);
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  color: var(--color-main);
+}
+
+.lead {
+  margin: 10px 0 0;
+  max-width: 70ch;
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+.priceBox {
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  border: var(--border-main);
+  background: var(--bg-card);
+  color: var(--color-main);
+  box-shadow: var(--shadow-small);
+  min-width: 240px;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.priceHint {
+  color: var(--color-secondary);
+  margin-top: 4px;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  border: var(--border-main);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-small);
+  padding: 20px;
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .priceBox {
+    min-width: 0;
+    width: 100%;
+  }
+}

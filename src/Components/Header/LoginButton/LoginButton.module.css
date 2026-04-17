@@ -1,0 +1,119 @@
+.button,
+.trigger {
+  display: inline-block;
+  padding: var(--btn-padding);
+  border-radius: var(--radius-lg);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-main);
+  background: var(--bg-secondary);
+  backdrop-filter: var(--btn-backdrop);
+  border: var(--border-main);
+  box-shadow: var(--shadow-small);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button:hover,
+.trigger:hover {
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .button {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+  z-index: 0;
+  min-width: 3rem;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triggerLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.crown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #facc15;
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.arrow {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* ------------------------------------------------------
+                Выпадающий список
+------------------------------------------------------ */
+
+.dropdown {
+  position: absolute;
+  top: var(--dropdown-offset);
+  right: 0;
+
+  min-width: var(--dropdown-width);
+  padding: var(--dropdown-padding);
+
+  border-radius: var(--radius-lg);
+  border: var(--border-main);
+  background: var(--bg-secondary);
+
+  box-shadow: var(--shadow-small);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  animation: fadeDown var(--transition-fast) forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+.item:hover {
+  transform: translateY(-1px);
+}
+
+.active {
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}

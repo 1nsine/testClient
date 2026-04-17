@@ -1,0 +1,56 @@
+.toggleWrapper {
+  width: 60px;
+  height: 32px;
+  background: var(--toggle-bg, rgba(255, 255, 255, 0.2));
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: var(--icon-color, #fff);
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.toggleBall {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ball-bg, #fff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+  z-index: 1;
+}
+
+.toggleBall[data-theme="dark"] {
+  transform: translateX(28px);
+}
+
+/* Смена иконок цвета при теме */
+[data-theme="light"] .icon.sun {
+  color: #ffd700; /* желтый солнце */
+}
+[data-theme="light"] .icon.moon {
+  color: #aaa;
+}
+[data-theme="dark"] .icon.sun {
+  color: #aaa;
+}
+[data-theme="dark"] .icon.moon {
+  color: #64e9df; /* голубой луна */
+}

@@ -1,0 +1,88 @@
+.hero {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg-gradient);
+}
+
+.container {
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border: var(--border-main);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-main);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-small);
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--color-main);
+}
+
+.subtitle {
+  max-width: 620px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 32px;
+  color: var(--color-main);
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.primaryBtn {
+  padding: 12px 26px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-main);
+  background: var(--bg-secondary);
+  border: var(--border-main);
+  box-shadow: var(--shadow-small);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryBtn:hover {
+  background-color: var(--bg-hover);
+  box-shadow: var(--shadow-main);
+}
+
+.secondaryBtn {
+  padding: 12px 26px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-main);
+  opacity: 0.8;
+}
+
+.secondaryBtn:hover {
+  opacity: 1;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.6;
+  color: var(--color-main);
+}

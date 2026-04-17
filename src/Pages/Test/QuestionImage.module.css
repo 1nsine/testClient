@@ -1,0 +1,84 @@
+/* =========================================================
+   Контейнер для изображения
+========================================================= */
+.imageContainer {
+  grid-area: 2 / 1 / 11 / 11;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  max-width: 1000px;
+  width: 100%;
+
+  /* Чтобы не прыгала верстка */
+  min-height: 300px;
+
+  /* Лёгкий фон во время загрузки */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* =========================================================
+   Loader overlay
+========================================================= */
+.loaderWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* =========================================================
+   Изображение
+========================================================= */
+.img {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  border-radius: 12px;
+  object-fit: contain;
+  display: block;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* =========================================================
+   Планшеты
+========================================================= */
+@media (max-width: 1024px) {
+  .img {
+    max-width: 90%;
+    max-height: 80vh;
+  }
+}
+
+/* =========================================================
+   Мобильные
+========================================================= */
+@media (max-width: 768px) {
+  .imageContainer {
+    grid-area: auto;
+    min-height: 200px;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    border-radius: 8px;
+  }
+}

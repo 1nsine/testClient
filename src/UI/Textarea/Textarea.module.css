@@ -1,0 +1,65 @@
+.textarea {
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  font-size: 15px;
+  box-sizing: border-box;
+
+  background: var(--input-bg);
+  border: var(--border-main);
+  border-radius: var(--border-radius);
+  color: var(--color-main);
+  resize: none;
+  backdrop-filter: var(--btn-backdrop);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.3s ease;
+}
+
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+}
+
+.textarea:focus {
+  outline: none;
+  border: var(--border-hover);
+  box-shadow: var(--shadow-hover, none);
+}
+
+.textarea::placeholder {
+  color: var(--color-secondary);
+  transition: color 0.3s;
+}
+
+.textarea:not(:focus):placeholder-shown::placeholder {
+  color: var(--textarea-placeholder);
+}
+
+/* ----------- LABEL ----------- */
+
+.textarea:focus + label,
+.textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 14px;
+  color: var(--color-secondary);
+  background: var(--bg-secondary);
+  backdrop-filter: var(--card-backdrop, blur(16px));
+}
+
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--textarea-bg) inset !important;
+  box-shadow: 0 0 0 1000px var(--textarea-bg) inset !important;
+  -webkit-text-fill-color: var(--color-main) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

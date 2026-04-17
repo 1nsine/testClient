@@ -1,0 +1,92 @@
+:root {
+  /* Gradient */
+  --bg-gradient:
+    radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 197, 94, 0.18),
+      transparent 55%
+    ),
+    var(--bg-main);
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 1rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-main: 0.5s ease;
+
+  /* Button */
+  --btn-padding: 6px 16px;
+  --btn-font-size: 13px;
+  --btn-font-weight: 600;
+  --btn-backdrop: blur(12px);
+  --btn-border-radius: 0.5rem;
+
+  /* Dropdown */
+  --dropdown-offset: 48px;
+  --dropdown-width: 140px;
+  --dropdown-padding: 10px;
+}
+
+:root[data-theme="light"] {
+  /* Backgrounds*/
+  --bg-main: #e8e8e8;
+  --bg-secondary: rgba(232, 232, 232, 0.22);
+  --bg-hover: rgba(0, 0, 0, 0.15);
+  --bg-card: rgba(255, 255, 255);
+
+  /* Colors */
+  --color-main: #000;
+  --color-secondary: rgba(0, 0, 0, 0.3);
+
+  /* Shadows */
+  --shadow-main: 20px 20px 20px rgba(0, 0, 0, 0.22);
+  --shadow-small: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 14px 35px rgba(0, 0, 0, 0.25);
+
+  /* Borders */
+  --border-main: 1px solid rgba(0, 0, 0, 0.4);
+  --border-hover: 1px solid black;
+  --border-radius: 1rem;
+
+  /* Inputs */
+  --input-bg: rgba(255, 255, 255, 0.85);
+  --input-border: rgba(0, 0, 0, 0.12);
+  --input-border-focus: var(--accent);
+  --input-text: #1c1c1e;
+  --input-placeholder: #8e8e93;
+}
+
+:root[data-theme="dark"] {
+  /* Backgrounds*/
+  --bg-main: #000;
+  --bg-secondary: rgba(0, 0, 0, 0.22);
+  --bg-hover: rgba(255, 255, 255, 0.15);
+  --bg-card: rgba(44, 44, 46);
+  /* Colors */
+  --color-main: rgba(232, 232, 232);
+  --color-secondary: rgba(232, 232, 232, 0.3);
+
+  /* Shadows */
+  --shadow-main: 12px 17px 51px rgba(255, 255, 255, 0.22);
+  --shadow-small: 0 4px 20px rgba(255, 255, 255, 0.15);
+  --shadow-hover: 0 14px 35px rgba(255, 255, 255, 0.25);
+
+  /* Borders */
+  --border-main: 1px solid rgba(255, 255, 255, 0.4);
+  --border-hover: 1px solid rgba(255, 255, 255);
+  --border-radius: 1rem;
+
+  /* Inputs */
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --input-border: rgba(255, 255, 255, 0.2);
+  --input-border-focus: var(--accent);
+  --input-text: #fff;
+  --input-placeholder: #d0d0d0;
+}

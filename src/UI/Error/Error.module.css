@@ -1,0 +1,21 @@
+.errorContainer {
+  background: var(--bg-gradient);
+  color: var(--color-main);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorContent {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  text-align: center;
+  line-height: 2;
+}

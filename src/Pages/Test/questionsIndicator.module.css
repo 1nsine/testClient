@@ -1,0 +1,78 @@
+.questionsIndicator {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 80px;
+  grid-area: 1 / 1 / 2 / 15;
+}
+
+.indicatorTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.questionsIndicator::-webkit-scrollbar {
+  height: 6px;
+}
+
+.questionsIndicator::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 3px;
+}
+
+.questionsGrid {
+  display: inline-flex;
+  gap: 8px;
+  flex-shrink: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.questionsGrid::-webkit-scrollbar {
+  display: none;
+}
+.questionDot {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.current {
+  background: #667eea !important;
+  color: #fff !important;
+}
+
+.correct {
+  background: #4caf50 !important;
+  color: #fff !important;
+}
+
+.incorrect {
+  background: #e53935 !important;
+  color: #fff !important;
+}
+
+.notAnswered {
+  background: #eee;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .questionsIndicator {
+    grid-row: 1;
+  }
+}

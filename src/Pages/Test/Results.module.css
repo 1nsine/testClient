@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+}
+
+.results {
+  border: var(--border-main);
+  max-width: 420px;
+  width: 100%;
+  padding: 24px 20px;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ===== Заголовки ===== */
+.results h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.results h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* ===== Текст ===== */
+.results p {
+  font-size: 16px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Процент */
+.percentage {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 16px 0 20px;
+}
+
+/* ===== Кнопки ===== */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button {
+  appearance: none;
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+/* ===== СТАТУС ЭКЗАМЕНА ===== */
+.passed {
+  border: 2px solid rgba(52, 199, 89, 0.4);
+}
+
+.failed {
+  border: 2px solid rgba(255, 59, 48, 0.4);
+}
+
+/* ===== Светлая тема ===== */
+@media (prefers-color-scheme: light) {
+  .results {
+    background: rgba(255, 255, 255, 0.85);
+    color: #000;
+  }
+
+  .passed h3 {
+    color: #34c759; /* iOS green */
+  }
+
+  .failed h3 {
+    color: #ff3b30; /* iOS red */
+  }
+
+  .button {
+    background: #f2f2f7;
+    color: #000;
+  }
+
+  .button.primary {
+    background: #007aff;
+    color: #fff;
+  }
+}
+
+/* ===== Тёмная тема ===== */
+@media (prefers-color-scheme: dark) {
+  .results {
+    background: rgba(28, 28, 30, 0.85);
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .passed h3 {
+    color: #30d158;
+  }
+
+  .failed h3 {
+    color: #ff453a;
+  }
+
+  .button {
+    background: #2c2c2e;
+    color: #fff;
+  }
+
+  .button.primary {
+    background: #0a84ff;
+    color: #fff;
+  }
+}

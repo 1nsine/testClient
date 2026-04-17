@@ -1,0 +1,6 @@
+.answers {
+  grid-area: 5 / 11 / 10 / 15;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
