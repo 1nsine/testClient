@@ -16,8 +16,6 @@ export const BetaTestBanner = () => {
     setIsReaded(true);
   };
 
-  if (isReaded) return null;
-
   return (
     <div
       style={{
@@ -30,8 +28,8 @@ export const BetaTestBanner = () => {
       }}
     >
       <p>
-        Приложение находится в бета-тестировании. Некоторые функции могут быть
-        недоступны.
+        Сервера проекта временно недоступны.Ведется работа по устранению
+        неполадок
       </p>
 
       <FiX
