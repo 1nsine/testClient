@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
 
 export const BetaTestBanner = () => {
-  const [isReaded, setIsReaded] = useState(false);
+  // const [isReaded, setIsReaded] = useState(false);
 
-  useEffect(() => {
-    const readed = localStorage.getItem("readed");
-    if (readed === "true") {
-      setIsReaded(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const readed = localStorage.getItem("readed");
+  //   if (readed === "true") {
+  //     setIsReaded(true);
+  //   }
+  // }, []);
 
-  const setReaded = () => {
-    localStorage.setItem("readed", "true");
-    setIsReaded(true);
-  };
+  // const setReaded = () => {
+  //   localStorage.setItem("readed", "true");
+  //   setIsReaded(true);
+  // };
 
   return (
     <div
@@ -40,7 +40,7 @@ export const BetaTestBanner = () => {
           right: 10,
           cursor: "pointer",
         }}
-        onClick={setReaded}
+        // onClick={setReaded}
       />
     </div>
   );
